@@ -1,4 +1,4 @@
-# README - download_missing_xml.py
+# README 
 
 ## Scopo
 `download_missing_xml.py` tenta di scaricare il full-text XML dei paper a partire da una lista di PMID (uno per riga), usando il servizio SOAP di Europe PMC.
@@ -22,7 +22,7 @@ Lo script e progettato per processare grandi liste in modo robusto, scrivendo i 
 Se non e gia installata:
 
 ```bash
-/Users/marcovenanzi/Desktop/PubMed2PDF/.venv/bin/pip install zeep
+.venv/bin/pip install zeep
 ```
 
 ## Input atteso
@@ -56,7 +56,7 @@ Per ogni PMID lo script:
 ## Parametri CLI
 
 ```bash
-/Users/marcovenanzi/Desktop/PubMed2PDF/.venv/bin/python download_missing_xml.py [opzioni]
+.venv/bin/python download_missing_xml.py [opzioni]
 ```
 
 Opzioni principali:
@@ -75,7 +75,7 @@ Opzioni principali:
 
 ### Test rapido su pochi record
 ```bash
-/Users/marcovenanzi/Desktop/PubMed2PDF/.venv/bin/python download_missing_xml.py \
+.venv/bin/python download_missing_xml.py \
   --limit 50 \
   --timeout 5 \
   --sleep 0 \
@@ -85,7 +85,7 @@ Opzioni principali:
 
 ### Run completo
 ```bash
-/Users/marcovenanzi/Desktop/PubMed2PDF/.venv/bin/python download_missing_xml.py \
+.venv/bin/python download_missing_xml.py \
   --pmid-file failed_retry_v3.tsv \
   --timeout 5 \
   --sleep 0 \
@@ -126,5 +126,3 @@ Opzioni principali:
 - Indica terminazione del processo (signal).
 - I file gia scritti restano validi; puoi rilanciare il comando.
 
-## Script correlati
-- `europepmc_soap_client.py`: client SOAP generico per test e interrogazioni manuali.

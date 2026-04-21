@@ -1,7 +1,7 @@
 # README 
 
 ## Scopo
-`download_missing_xml.py` tenta di scaricare il full-text XML dei paper a partire da una lista di PMID (uno per riga), usando il servizio SOAP di Europe PMC.
+`Europe_PMC_downloader.py` tenta di scaricare il full-text XML dei paper a partire da una lista di PMID (uno per riga), usando il servizio SOAP di Europe PMC.
 
 Lo script e progettato per processare grandi liste in modo robusto, scrivendo i risultati in streaming (successi/fallimenti) e salvando i file XML man mano.
 
@@ -56,7 +56,7 @@ Per ogni PMID lo script:
 ## Parametri CLI
 
 ```bash
-.venv/bin/python download_missing_xml.py [opzioni]
+.venv/bin/python Europe_PMC_downloader.py [opzioni]
 ```
 
 Opzioni principali:
@@ -75,7 +75,7 @@ Opzioni principali:
 
 ### Test rapido su pochi record
 ```bash
-.venv/bin/python download_missing_xml.py \
+.venv/bin/python Europe_PMC_downloader.py \
   --limit 50 \
   --timeout 5 \
   --sleep 0 \
@@ -85,7 +85,7 @@ Opzioni principali:
 
 ### Run completo
 ```bash
-.venv/bin/python download_missing_xml.py \
+.venv/bin/python Europe_PMC_downloader.py \
   --pmid-file failed_retry_v3.tsv \
   --timeout 5 \
   --sleep 0 \

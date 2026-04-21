@@ -121,7 +121,3 @@ Main options:
 ### No XML downloaded
 - Verify with a known OA/PMC PMID (e.g., a record with `HAS_FT:Y` via search)
 - Check connectivity to the Europe PMC endpoint
-
-### Interruption with exit code 143
-- Indicates process termination (signal).
-- Files already written remain valid; you can rerun the command.
